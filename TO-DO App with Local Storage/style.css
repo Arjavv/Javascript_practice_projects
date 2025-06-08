@@ -1,46 +1,95 @@
+/* Background Styling */
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* Main Container */
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  color: #fff;
+  justify-content: center;
+   align-self: flex-start;
 }
 
-input[type="text"] {
-    width: 70%;
-    padding: 8px;
-    margin-right: 5px;
+/* Heading */
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
-button {
-    padding: 8px;
+/* Input & Button */
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
-li {
-    background: #eee;
-    margin: 8px 0;
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 3px;
+#addBtn {
+  padding: 10px 15px;
+  border: none;
+  background-color: #ff4500;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease;
 }
 
-li button {
-    background: red;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
+#addBtn:hover {
+  background-color: #e03e00;
+}
+
+/* Task List */
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li span {
+  flex: 1;
+}
+
+#taskList li button {
+  background: red;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
 }
